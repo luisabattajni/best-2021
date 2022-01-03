@@ -15,12 +15,12 @@ import org.springframework.web.bind.annotation.RequestParam;
 public class IndexController {
 	
 	@GetMapping
-	public String index(Model model, @RequestParam(name="titolo", defaultValue="Default") String titoloParam) {
+	public String index(Model model, @RequestParam(name="name", defaultValue="Default") String nameParam) {
 		// logica applicativa
 
 		
-		if(titoloParam == null) {
-			titoloParam = "Default";
+		if(nameParam == null) {
+			nameParam = "Default";
 		}
 		
 		// passo la logica alla view col Model
@@ -33,7 +33,7 @@ public class IndexController {
 	
 	@GetMapping("/movies")
 	public String movies(Model model) {
-		List<String> movieList = new ArrayList<String>();
+//		List<String> movieList = new ArrayList<String>();
 		
 		
 		model.addAttribute("movies", Arrays.asList("Film1", "Film2", "Film3", "Film4", "Film5"));
@@ -42,7 +42,7 @@ public class IndexController {
 	
 	@GetMapping("/songs")
 	public String songs(Model model) {
-		List<String> songList = new ArrayList<String>();
+//		List<String> songList = new ArrayList<String>();
 		
 		
 		model.addAttribute("songs", Arrays.asList("S1", "S2", "S3", "S4", "S5"));

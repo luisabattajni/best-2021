@@ -13,6 +13,9 @@
 				</li>	
 			</ul>
 		</div>
+		<p>
+			<a th:href="@{/}" th:text="'Homepage '"></a>
+		</p>
 		<p th:unless="${songs.size() > 0}">Non hai messo canzoni</p>
 	</body>
 </html>

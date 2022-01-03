@@ -13,6 +13,9 @@
 				</li>	
 			</ul>
 		</div>
+		<p>
+			<a th:href="@{/}" th:text="'Homepage '"></a>
+		</p>
 		<p th:unless="${movies.size() > 0}">Non hai messo film</p>
 	</body>
 </html>
