@@ -1,0 +1,18 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+	<head>
+		<title>Movies</title>
+	</head>
+	<body>
+		<h1>Movies</h1>
+		<div th:if="${movies.size() > 0}">
+			<h2>5 best movies 2021</h2>
+			<ul>
+				<li th:each="movie : ${movies}">
+					<a  th:text="${movie}"></a>
+				</li>	
+			</ul>
+		</div>
+		<p th:unless="${movies.size() > 0}">Non hai messo film</p>
+	</body>
+</html>
