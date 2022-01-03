@@ -38,7 +38,7 @@ public class IndexController {
 	@GetMapping("/songs")
 	public String songs(Model model) {
 
-		model.addAttribute("songs", Arrays.asList("Easy on me", "Montero", "transparent soul", "To Be Loved", "'All Too Well"));
+		model.addAttribute("songs", Arrays.asList("Easy on me", "Montero", "transparent soul", "To Be Loved", "All Too Well"));
 		return "songs";
 	}
 	
